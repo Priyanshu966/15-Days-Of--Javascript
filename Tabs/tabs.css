@@ -95,3 +95,23 @@ h4{
 .display{
     display: block;
 }
+@media screen and (max-width:1000px){
+    img{
+        margin: 0px;
+        width: 570px;
+    }
+    .data-container{
+        flex-flow: column;
+        padding: 0px 20px;
+    }
+    .about-container{
+        max-width: 570px;
+        margin: 0px;
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:600px){
+    img{
+        width: 90vw;
+    }
+}
