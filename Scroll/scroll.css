@@ -69,6 +69,7 @@ a{
 }
 nav{
     padding: 0 20px;
+    transition: var(--transition);
 }
 .nav-center{
     padding: 10px 0px 10px 0px;
@@ -129,6 +130,11 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--transition);
+}
+.explore:hover{
+    background: var(--clr-white);
+    color: var(--clr-secondary);
 }
 .feature-container{
     width: 100%;
@@ -204,9 +210,6 @@ footer{
     }
 }
 @media screen and (max-width:725px){
-    .link{
-        display: block;
-    }
     nav{
         background: var(--clr-white);
     }
@@ -228,6 +231,7 @@ footer{
     li{
         display: block;
         margin: 20px 0px;
+        transition: var(--transition);
     }
     .nav-center{
         flex-flow: column;
@@ -236,6 +240,7 @@ footer{
     .link{
         width: 100%;
         display: none;
+        transition: var(--transition);
     }
     .active{
         display: block;
