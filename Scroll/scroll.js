@@ -5,6 +5,9 @@ let link = document.querySelector('.link')
 let forward = document.querySelectorAll('.forward')
 let navHeight = navFixed.getBoundingClientRect().height
 
+let currentDate = document.querySelector('.date')
+currentDate.innerHTML = new Date().getFullYear()
+
 window.addEventListener('scroll' , function () {
     let showHeight = window.pageYOffset
 
@@ -30,11 +33,19 @@ navToggle.addEventListener('click' , function(){
 
 forward.forEach(function(e){
     e.addEventListener('click' , function(m){
-        m.currentTarget.preventDefault
+        m.preventDefault()
         let id =  m.currentTarget.getAttribute('href').slice(1)
-        let position = document.getElementById(id).offsetTop;
+        let position = document.getElementById(id).offsetTop
+        let navFixedCont = navFixed.classList.contains('fixed')
+        if(navFixedCont){
+            position = position - navHeight
+           
+        }
+        else{
+            position = position + navHeight + 20
+        }
         console.log(position)
-        console.log(id)
+        console.log(navHeight)
 
         window.scrollTo({
             left: 0,
